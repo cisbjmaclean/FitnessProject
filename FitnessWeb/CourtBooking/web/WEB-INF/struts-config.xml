@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+
+
+<struts-config>
+    <form-beans>
+        <form-bean type="forms.LogonForm" name="logonForm"/>
+        <form-bean type="forms.MainForm" name="mainForm"/>
+        <form-bean type="forms.FutureForm" name="futureForm"/>
+        <form-bean type="forms.MemberForm" name="memberForm"/>
+    </form-beans>
+    
+    <global-exceptions>
+    
+    </global-exceptions>
+
+    <global-forwards>
+        <forward name="welcome"  path="/Welcome.do"/>
+        <forward name="main"  path="/Main.do"/>
+        <forward name="runMain"  path="/main.do"/>
+        <forward name="courtBooking"  path="courtBookingTile"/>
+        <forward name="courtBookingDetails"  path="courtBookingDetailsTile"/>
+        <forward name="future"  path="futureTile"/>
+        <forward name="member"  path="memberTile"/>
+      </global-forwards>
+
+    <action-mappings>
+        <action path="/Welcome" forward="welcomeTile"  />
+        <action path="/Main" forward="mainTile"  />
+        <action path="/Future" forward="futureTile"  
+                 name="futureForm" 
+                 input="futureTile" 
+        />
+           
+        <action path="/GetCourtBookingDetails" 
+                 type="actions.GetCourtBookingDetails" 
+                 name="mainForm" 
+                 input="courtBookingTile" 
+                 scope="request" />
+        
+        <action path="/InsertCourtBooking" 
+                 type="actions.InsertCourtBooking" 
+                 name="mainForm" 
+                 input="mainTile" 
+                 scope="request" />
+        
+        <action path="/main" 
+                 type="actions.Main" 
+                 name="mainForm" 
+                 input="mainTile" 
+                 validate="true"
+                 scope="request" />
+        
+        <action path="/mainMenu" 
+                 type="actions.MainMenu" 
+                 name="futureForm" 
+                 input="futureTile"
+                 scope="request" />
+        
+        <action  path="/authenticate" 
+                 type="actions.Authenticate" 
+                 name="logonForm" 
+                 input="welcomeTile" 
+                 validate="true"
+                 scope="request" />
+        
+        <action  path="/memberEdit" 
+                 type="actions.MemberEdit" 
+                 name="memberForm" 
+                 input="memberTile" 
+                 scope="request" />
+        
+    </action-mappings>
+
+            
+    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+
+    <message-resources parameter="properties/ApplicationResource"/>    
+    
+    <!-- ========================= Tiles plugin ===============================-->
+    <!--
+    This plugin initialize Tiles definition factory. This later can takes some
+    parameters explained here after. The plugin first read parameters from
+    web.xml, thenoverload them with parameters defined here. All parameters
+    are optional.
+    The plugin should be declared in each struts-config file.
+    - definitions-config: (optional)
+    Specify configuration file names. There can be several comma
+    separated file names (default: ?? )
+    - moduleAware: (optional - struts1.1)
+    Specify if the Tiles definition factory is module aware. If true
+    (default), there will be one factory for each Struts module.
+    If false, there will be one common factory for all module. In this
+    later case, it is still needed to declare one plugin per module.
+    The factory will be initialized with parameters found in the first
+    initialized plugin (generally the one associated with the default
+    module).
+    true : One factory per module. (default)
+    false : one single shared factory for all modules
+    - definitions-parser-validate: (optional)
+    Specify if xml parser should validate the Tiles configuration file.
+    true : validate. DTD should be specified in file header (default)
+    false : no validation
+
+    Paths found in Tiles definitions are relative to the main context.
+    -->
+    <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />      
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
+    
+    <!-- ========================= Validator plugin ================================= -->
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property
+            property="pathnames"
+            value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+    </plug-in>
+  
+</struts-config>

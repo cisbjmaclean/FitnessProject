@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.cis2250.app.MainMenuActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <TableLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" >
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/main_menu"
+                android:gravity="center"
+                android:id="@+id/textView" />
+        </TableRow>
+        <TableRow
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1.00" >
+            <TableLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.25" >
+                    <Button
+                        android:id="@+id/buttonCourtBooking"
+                        android:layout_width="0dp"
+                        android:layout_height="170dp"
+                        android:layout_weight="0.20"
+                        android:background="@drawable/iconcourt" />
+                    <Button
+                        android:id="@+id/buttonWeightTracking"
+                        android:layout_width="0dp"
+                        android:layout_height="170dp"
+                        android:layout_weight="0.20"
+                        android:background="@drawable/iconweight" />
+                    <Button
+                        android:id="@+id/button3"
+                        android:layout_width="0dp"
+                        android:layout_height="170dp"
+                        android:layout_weight="0.20"
+                        android:onClick="checkInCheckOut"
+                        android:background="@drawable/iconcheck" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.25" >
+
+                    <Button
+                        android:id="@+id/trainer_booking"
+                        android:layout_width="0dp"
+                        android:layout_height="170dp"
+                        android:layout_weight="0.33"
+                        android:background="@drawable/iconpersonal" />
+                    <Button
+                        android:id="@+id/button5"
+                        android:layout_width="0dp"
+                        android:layout_height="170dp"
+                        android:layout_weight="0.33"
+                        android:onClick="memberInformation"
+                        android:background="@drawable/iconmembers" />
+
+                    <Button
+                        android:id="@+id/aerobic_button"
+                        android:layout_width="0dp"
+                        android:layout_height="170dp"
+                        android:layout_weight="0.33"
+                        android:background="@drawable/iconaerobic" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.25" >
+                    <Button
+                        android:id="@+id/buttonAnnouncements"
+                        android:layout_width="0dp"
+                        android:layout_height="170dp"
+                        android:layout_weight="0.33"
+                        android:background="@drawable/iconannouce" />
+                    <Button
+                        android:id="@+id/buttonAdminAnnouncements"
+                        android:layout_width="0dp"
+                        android:layout_height="170dp"
+                        android:layout_weight="0.33"
+                        android:background="@drawable/iconadmin" />
+                    <Button
+                        android:id="@+id/reports"
+                        android:layout_width="0dp"
+                        android:layout_height="170dp"
+                        android:layout_weight="0.33"
+                        android:background="@drawable/iconreport" />
+                    
+                </TableRow>
+            </TableLayout>
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>

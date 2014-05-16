@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cis2250.app" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.cis2250.app.SplashScreen"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- The main/home activity (has no parent activity -->
+        <activity android:name="com.cis2250.app.MainMenuActivity"></activity>
+
+        <activity android:name="com.cis2250.app.LoginActivity"></activity>
+        <activity android:name="com.cis2250.CalendarUtils.CalendarActivity"></activity>
+
+
+        <!-- Child activities (ADD PARENT ACTIVITY INFORMATION) -->
+        <activity android:name=".SettingsActivity"
+            android:parentActivityName="com.cis2250.app.MainMenuActivity" >
+            <!-- Parent activity meta-data to support API level 7+ -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cis2250.app.MainMenuActivity" />
+        </activity>
+
+        <activity android:name=".AboutActivity"
+            android:parentActivityName="com.cis2250.app.MainMenuActivity" >
+            <!-- Parent activity meta-data to support API level 7+ -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cis2250.app.MainMenuActivity" />
+        </activity>
+
+
+        <activity android:name="com.cis2250.court.CourtBooking1Activity"
+            android:parentActivityName="com.cis2250.app.MainMenuActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cis2250.app.MainMenuActivity" />
+        </activity>
+        <activity android:name="com.cis2250.court.CourtBooking2Activity"
+
+        android:parentActivityName="com.cis2250.app.MainMenuActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cis2250.app.MainMenuActivity" />
+        </activity>
+        <activity android:name="com.cis2250.court.CourtBooking2bActivity"
+    android:parentActivityName="com.cis2250.app.MainMenuActivity" >
+    <meta-data
+        android:name="android.support.PARENT_ACTIVITY"
+        android:value="com.cis2250.app.MainMenuActivity" />
+</activity>
+        <activity android:name="com.cis2250.court.CourtBooking3Activity"
+            android:parentActivityName="com.cis2250.app.MainMenuActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cis2250.app.MainMenuActivity" />
+        </activity>
+
+        <activity android:name="com.cis2250.reports.ReportsMainActivity"/>
+        <activity android:name="com.cis2250.reports.CourtBookingReportActivity"/>
+
+        <activity
+            android:name="com.cis2250.app.MemberInformation"
+            android:label="@string/title_activity_member_information"
+            android:parentActivityName="com.cis2250.app.MainMenuActivity"
+            >
+        </activity>
+
+        <activity android:name="com.cis2250.app.TrainerBooking" ></activity>
+
+
+        <activity android:label="@string/app_name" android:name="com.cis2250.announcements.Announcements"> </activity>
+        <activity android:label="AdminAnnouncements" android:name="com.cis2250.announcements.AdminAnnouncements"></activity>
+
+        <activity android:name="com.cis2250.booking.AerobicActivity1"></activity>
+        <activity android:name="com.cis2250.booking.AerobicActivity2"></activity>
+        <activity android:name="com.cis2250.booking.AerobicActivity3"></activity>
+
+        <activity android:label="@string/app_name" android:name="com.cis2250.weight_tracker.WeightTrackerActivity"> </activity>
+        <activity android:label="WeightTracking" android:name="com.cis2250.weight_tracker.WeightTrackerResultsActivity"></activity>
+
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+</manifest>

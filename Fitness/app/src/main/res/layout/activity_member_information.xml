@@ -1,0 +1,259 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cis2250.app.MemberInformation"
+    tools:ignore="MergeRootFrame" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/MemberLabel"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal|top" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/StatusLabel"
+        android:id="@+id/textView2"
+        android:layout_gravity="left|top"
+        android:layout_marginTop="40dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/MemberIdLabel"
+        android:id="@+id/textView3"
+        android:layout_gravity="left|top"
+        android:layout_marginTop="80dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/MemberTypeLabel"
+        android:id="@+id/textView4"
+        android:layout_gravity="left|top"
+        android:layout_marginTop="110dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/FNameLabel"
+        android:id="@+id/textView5"
+        android:layout_gravity="left|top"
+        android:layout_marginTop="140dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/LNameLabel"
+        android:id="@+id/textView6"
+        android:layout_gravity="left|top"
+        android:layout_marginTop="170dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/EmailLabel"
+        android:id="@+id/textView7"
+        android:layout_gravity="left|top"
+        android:layout_marginTop="200dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/HomePhoneLabel"
+        android:id="@+id/textView8"
+        android:layout_gravity="left|top"
+        android:layout_marginTop="230dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/CellPhoneLabel"
+        android:id="@+id/textView9"
+        android:layout_gravity="left|top"
+        android:layout_marginTop="260dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/WorkPhoneLabel"
+        android:id="@+id/textView10"
+        android:layout_gravity="left|top"
+        android:layout_marginTop="290dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/AddressLabel"
+        android:id="@+id/textView11"
+        android:layout_gravity="left|top"
+        android:layout_marginTop="320dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/MemberSinceLabel"
+        android:id="@+id/textView12"
+        android:layout_gravity="left|top"
+        android:layout_marginTop="350dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/PasswordLabel"
+        android:id="@+id/textView13"
+        android:layout_gravity="left|top"
+        android:layout_marginTop="380dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/RePasswordLabel"
+        android:id="@+id/textView14"
+        android:layout_gravity="left|top"
+        android:layout_marginTop="410dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Status"
+        android:layout_gravity="right|top"
+        android:layout_marginTop="30dp"
+        android:editable="false"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/MemberId"
+        android:layout_gravity="right|top"
+        android:layout_marginTop="60dp"
+        android:editable="false"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/MemberType"
+        android:layout_gravity="right|top"
+        android:layout_marginTop="100dp"
+        android:editable="false"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/NameLabel"
+        android:ems="10"
+        android:id="@+id/FName"
+        android:layout_gravity="right|top"
+        android:layout_marginTop="130dp"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/NameLabel"
+        android:ems="10"
+        android:id="@+id/LName"
+        android:layout_gravity="right|top"
+        android:layout_marginTop="160dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/Email"
+        android:layout_gravity="right|top"
+        android:layout_marginTop="190dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/HomeNumber"
+        android:layout_gravity="right|top"
+        android:layout_marginTop="218dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/CellNumber"
+        android:layout_gravity="right|top"
+        android:layout_marginTop="245dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/WorkPhone"
+        android:layout_gravity="right|top"
+        android:layout_marginTop="275dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Address"
+        android:layout_gravity="right|top"
+        android:layout_marginTop="310dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/MemberSince"
+        android:layout_gravity="right|top"
+        android:layout_marginTop="340dp"
+        android:editable="false"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/Password"
+        android:layout_gravity="right|top"
+        android:layout_marginTop="367dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/rePassword"
+        android:layout_gravity="right|top"
+        android:layout_marginTop="400dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/SubmitLabel"
+        android:id="@+id/SubmitButton"
+        android:layout_gravity="center_horizontal|bottom"
+        android:onClick="updateInfo"/>
+
+
+</FrameLayout>

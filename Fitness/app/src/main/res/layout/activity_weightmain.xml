@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fullscreen_content">
+
+
+    <!-- This is the general layout of my weight tracker screen -->
+
+        <TextView
+            android:id="@+id/currentWeightText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Please Enter Your Current Weight"
+            android:layout_x="90dp"
+            android:layout_y="12dp"
+            android:layout_below="@+id/buttonEnterStart"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="86dp" />
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/currentWeightEntry"
+        android:layout_below="@+id/currentWeightText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="84dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/goalWeightEntry"
+        android:layout_below="@+id/currentWeightEntry"
+        android:layout_alignStart="@+id/currentWeightEntry"
+        android:layout_marginTop="122dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit!"
+        android:id="@+id/submit_button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please Enter Your Staring Weight"
+        android:id="@+id/startWeightText"
+        android:layout_marginTop="64dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/goalWeightEntry" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/startWeightEntry"
+        android:layout_marginTop="57dp"
+        android:layout_below="@+id/startWeightText"
+        android:layout_alignEnd="@+id/goalWeightEntry" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter New Start Weight"
+        android:id="@+id/buttonEnterStart"
+        android:layout_below="@+id/startWeightEntry"
+        android:layout_alignEnd="@+id/startWeightText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please Enter Your Goal Weight"
+        android:id="@+id/textView"
+        android:layout_below="@+id/currentWeightEntry"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="62dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter New Goal Weight"
+        android:id="@+id/buttonEnterGoal"
+        android:layout_below="@+id/goalWeightEntry"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
+
+
