@@ -26,15 +26,15 @@
     
     --%>
 
-    <div style="text-align: center; height: 300px; background-color: #efefef; padding: 10px; -webkit-border-radius: 12px; -moz-border-radius: 12px; margin-right: 10px">
+    <div>
 
-        <h3 style="text-align: center; -webkit-border-radius: 10px; -moz-border-radius: 10px; margin-top: 0px; margin-bottom: 20px; padding: 8px">
+        <h3>
             <strong><bean:message key="label.member.details" /></strong>
         </h3>    
 
 
 
-        <table align="center" style="text-align: left;  border-style: ridge">
+        <table>
             <html:hidden name="memberForm" property="updateFlag"/>
             <tr>
                 <td>
@@ -54,11 +54,9 @@ information message.  --%>
                 </td>
             </tr>
             <tr >
-                <td style="border-bottom:1pt solid black;">
+                <td>
                     <label class="alignCenter" for="memberId">
-                        <strong><bean:message key="label.members" /></strong></label>                </td>
-                <td style="border-bottom:1pt solid black;">
-
+                        <strong><bean:message key="label.members" /></strong></label>               
                     <html:select name="memberForm" property="memberId">
                         <html:optionsCollection name="memberForm" property="members" label="lastNameFirstName" value="memberId" />
                     </html:select>
@@ -70,8 +68,6 @@ information message.  --%>
                     <td>
                         <label class="alignCenter" for="newMemberId">
                             <strong><bean:message key="label.new.member.id" /></strong></label>
-                    </td>
-                    <td>
                         <input type="text" id="forUpdate" name="memberForm" property="newMemberId" size="20" />
                     </td>
                 </tr>
@@ -79,11 +75,10 @@ information message.  --%>
 
             <tr>
                 <td><label class="alignCenter" for="userType">
-                        <strong><bean:message key="label.user.type" /></strong></label></td>
-                <td>
-                    <html:radio name="memberForm" property="userType" value="1">Member</html:radio><br/>
-                    <html:radio name="memberForm" property="userType" value="2">Administration</html:radio><br/>
-                    <html:radio name="memberForm" property="userType" value="3">Management</html:radio><br/>
+                        <strong><bean:message key="label.user.type" /></strong></label>
+                    <html:radio name="memberForm" property="userType" value="1">Member</html:radio>
+                    <html:radio name="memberForm" property="userType" value="2">Administration</html:radio>
+                    <html:radio name="memberForm" property="userType" value="3">Management</html:radio>
                     </td>
                 </tr>
 
@@ -91,8 +86,6 @@ information message.  --%>
                     <td>
                         <label class="alignCenter" for="lastName">
                             <strong><bean:message key="label.last.name" /></strong></label>
-                </td>
-                <td>
                     <html:text name="memberForm"  property="lastName" size="20" />
                 </td>
             </tr>
@@ -101,8 +94,6 @@ information message.  --%>
                 <td>
                     <label class="alignCenter" for="firstName">
                         <strong><bean:message key="label.first.name" /></strong></label>
-                </td>
-                <td>
                     <html:text name="memberForm"  property="firstName" size="20" />
                 </td>
             </tr>
@@ -111,8 +102,6 @@ information message.  --%>
                 <td>
                     <label class="alignCenter" for="password">
                         <strong><bean:message key="label.password" /></strong></label>
-                </td>
-                <td>
                     <html:password name="memberForm"  property="password" size="20" />
                 </td>
             </tr>
@@ -121,8 +110,6 @@ information message.  --%>
                 <td>
                     <label class="alignCenter" for="email">
                         <strong><bean:message key="label.email" /></strong></label>
-                </td>
-                <td>
                     <html:text name="memberForm"  property="email" size="20" />
                 </td>
             </tr>
@@ -132,8 +119,6 @@ information message.  --%>
                 <td>
                     <label class="alignCenter" for="phoneCell">
                         <strong><bean:message key="label.phone.cell" /></strong></label>
-                </td>
-                <td>
                     <html:text name="memberForm"  property="phoneCell" size="20" />
                 </td>
             </tr>
@@ -142,8 +127,6 @@ information message.  --%>
                 <td>
                     <label class="alignCenter" for="phoneHome">
                         <strong><bean:message key="label.phone.home" /></strong></label>
-                </td>
-                <td>
                     <html:text name="memberForm"  property="phoneHome" size="20" />
                 </td>
             </tr>
@@ -152,8 +135,6 @@ information message.  --%>
                 <td>
                     <label class="alignCenter" for="phoneWork">
                         <strong><bean:message key="label.phone.work" /></strong></label>
-                </td>
-                <td>
                     <html:text name="memberForm"  property="phoneWork" size="20" />
                 </td>
             </tr>
@@ -163,8 +144,6 @@ information message.  --%>
                 <td>
                     <label class="alignCenter" for="address">
                         <strong><bean:message key="label.address" /></strong></label>
-                </td>
-                <td>
                     <html:text name="memberForm"  property="address" size="20" />
                 </td>
             </tr>
@@ -173,19 +152,16 @@ information message.  --%>
             <tr>
                 <td><label class="alignCenter" for="status">
                         <strong><bean:message key="label.status" /></strong></label>
-                </td>
-                <td>
-                    <html:radio name="memberForm" property="status" value="1">Active</html:radio><br/>
-                    <html:radio name="memberForm" property="status" value="0">Inactive</html:radio><br/>
-                        <br/>
+                    <html:radio name="memberForm" property="status" value="1">Active</html:radio>
+                    <html:radio name="memberForm" property="status" value="0">Inactive</html:radio>
                     </td>
                 </tr>
 
                 <tr>
                     <td><label class="alignCenter" for="memberShipType">
-                            <strong><bean:message key="label.membership.type" /></strong></label></td><td>
-                    <html:radio name="memberForm" property="memberShipType" value="1">Annual</html:radio><br>
-                    <html:radio name="memberForm" property="memberShipType" value="2">6 Month</html:radio><br>
+                            <strong><bean:message key="label.membership.type" /></strong></label>
+                    <html:radio name="memberForm" property="memberShipType" value="1">Annual</html:radio>
+                    <html:radio name="memberForm" property="memberShipType" value="2">6 Month</html:radio>
                     </td>
                 </tr>
 
@@ -194,8 +170,6 @@ information message.  --%>
                     <td>
                         <label class="alignCenter" for="memberShipDate">
                             <strong><bean:message key="label.membership.date" /></strong></label>
-                </td>
-                <td>
                     <%-- <input type="text" name="memberShipDate" id="memberShipDate" size="20" value="" /> --%>
                 </td>
             </tr>

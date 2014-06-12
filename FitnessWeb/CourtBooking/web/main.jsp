@@ -90,16 +90,13 @@ to pick their date.  This calendar was taken from the prototype javascript site.
         </script>
     </head>
     <body>
-
-
-
-        <div style="text-align: center; height: 300px; background-color: #efefef; padding: 10px; -webkit-border-radius: 12px; -moz-border-radius: 12px; margin-right: 10px">
+        <div>
 
             <%--  These messages can be used to display either messages, warnings, or errors from your
                   actions.  You'll notice that once a court is booked a message is put out as an 
                   information message.  --%>
             
-            <h3 style="text-align: center; -webkit-border-radius: 10px; -moz-border-radius: 10px; margin-top: 0px; margin-bottom: 20px; padding: 8px">
+            <h3>
                 <bean:message key="label.pick.date" />
             </h3>
 
@@ -117,23 +114,17 @@ to pick their date.  This calendar was taken from the prototype javascript site.
                 This is the embedded calendar code.  This set the value for the bookingDate.
             --%>
 
-            <div id="embeddedExample" style="">
+            <div id="embeddedExample">
                 <div id="embeddedCalendar" style="margin-left: auto; margin-right: auto">
                 </div>
                 <br />
-                <div id="bookingDateDiv" class="dateField" style="background-color: #efefef;">
+                <div id="bookingDateDiv" >
                     <label class="alignCenter" for="bookingDate">
                         <bean:message key="label.court.booking.date" /></label>
                     <input align="center" type="text" name="bookingDate" id="bookingDate" size="20" value="" />
                     <input type="submit" value="Book"/>
                 </div>
                 <br />
-            </div>
-
-
         </div>
-
-
     </body>
-
 </html:form>

@@ -31,13 +31,13 @@
     
     --%>
 
-    <div style="text-align: center; height: 300px; background-color: #efefef; padding: 10px; -webkit-border-radius: 12px; -moz-border-radius: 12px; margin-right: 10px">
-        <h3 style="text-align: center; -webkit-border-radius: 10px; -moz-border-radius: 10px; margin-top: 0px; margin-bottom: 20px; padding: 8px">
+    <div>
+        <h3>
             <strong><bean:message key="label.additional.details" /></strong>
 
         </h3>    
 
-        <table align="center" style="text-align: left; border-style: outset">
+        <table>
 
             <tr>
                 <td>
@@ -61,8 +61,6 @@ information message.  --%>
                 <td>
                     <label class="alignCenter" for="memberId">
                         <strong><bean:message key="label.member.id" /></strong></label>
-                </td>
-                <td>
                     <bean:write name="mainForm" property="memberId"/>
                 </td>
             </tr>
@@ -71,8 +69,6 @@ information message.  --%>
                 <td>
                     <label class="alignCenter" for="courtNumber">
                         <strong><bean:message key="label.court.number" /></strong></label>
-                </td>
-                <td>
                     <bean:write name="mainForm" property="courtNumber"/>
                 </td>
             </tr>
@@ -81,8 +77,6 @@ information message.  --%>
                 <td>
                     <label class="alignCenter" for="startTime">
                         <strong><bean:message key="label.start.time" /></strong></label>
-                </td>
-                <td>
                     <bean:write name="mainForm" property="startTime"/>
                 </td>
             </tr>
@@ -91,15 +85,12 @@ information message.  --%>
                 <td>
                     <label class="alignCenter" for="notes">
                         <strong><bean:message key="label.notes" /></strong></label>
-                </td>
-                <td>
                     <input type="text" name="notes" id="notes" size="20" value="" />
                 </td>
             </tr>
         </table>
 
         <div>
-            <br/>
             <input type="submit" value="submit"/>
             <input type="reset" value="reset"/>
         </div>

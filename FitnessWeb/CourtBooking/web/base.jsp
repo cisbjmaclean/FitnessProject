@@ -19,8 +19,8 @@ where the header, body and footers go.
    %>
 
 <html:html>
-
- <body style="background-color: #efefef;">
+ <head><link rel="stylesheet" type="text/css" href="http://bjmac.hccis.info:8080/styles/styles.css"></head>
+ <body>
  
     <!-- Header page information -->
      <tiles:insert attribute="header" />

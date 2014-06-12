@@ -10,8 +10,8 @@
 --%>
 
 <HTML>
-
-<body  style="background-color: #efefef;" text="#000000" link="#023264" alink="#023264" vlink="#023264">
+    <head><link rel="stylesheet" type="text/css" href="http://bjmac.hccis.info:8080/styles/styles.css"></head>
+<body>
 <table border="0" width="100%" cellspacing="5">
 <tr>
   <td colspan="2"><tiles:insert attribute="header" /></td>

@@ -20,16 +20,13 @@ They also have a button to return to the main form if they change their minds.
 
 <html:form action="/main">
     <body>
-        <div style="text-align: center; height: 300px; background-color: #efefef; padding: 10px; -webkit-border-radius: 12px; -moz-border-radius: 12px; margin-left: 5px; margin-right: 5px">
-
-            
                 
-            <h3 style="text-align: center; -webkit-border-radius: 10px; -moz-border-radius: 10px; margin-top: 0px; margin-bottom: 20px; padding: 0px">
+            <h3>
                 <bean:message key="label.choose.court.and.time" />
             </h3>    
 
-            <div style="text-align: center;" >
-            <table align="center" style="text-align: center; border-left: #000; border-style: outset">
+            <div>
+            <table>
                 <tr>
                     <td>
                         <%--  These messages can be used to display either messages, warnings, or errors from your
@@ -57,7 +54,7 @@ They also have a button to return to the main form if they change their minds.
                                 <bean:write name="TheCourtBooking" property="startTime"/> 
                             </logic:notEmpty>
                         </td>
-                        <td style="border-left:1pt dashed black;">
+                        <td>
                             <logic:empty name="TheCourtBooking" property="firstName">
                                 <a href="GetCourtBookingDetails.do?bookingDate=<bean:write name="TheCourtBooking" property="bookingDate" filter="true" />
 &startTime=<bean:write name="TheCourtBooking" property="startTime" filter="true"/>
@@ -79,8 +76,6 @@ They also have a button to return to the main form if they change their minds.
                 </tr>
             </table>
             </div>
-
-        </div>
 
     </body>
 

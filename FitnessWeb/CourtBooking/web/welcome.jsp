@@ -26,7 +26,7 @@
     
     --%>
         
-        <div style="height: 100px; text-align: center; background-color: #efefef; padding: 10px; -webkit-border-radius: 12px; -moz-border-radius: 12px; margin-right: 10px">
+        <div>
             <table align="center" >
             <tr>
                 <td>
@@ -50,18 +50,14 @@ information message.  --%>
                     <td>
                         <label class="alignCenter" for="userName">
                             <strong><bean:message key="login.username.label" /></strong></label>
-                    </td>
-                    <td>
-                        <input type="text" name="userName" id="userName" size="20" value="" />
+                        <input type="text" name="userName" id="userName" size="20" value="1" />
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <label class="alignCenter"  for="password">
                             <strong><bean:message key="login.password.label" /></strong></label>
-                    </td>
-                    <td>
-                        <input type="password" id="password" name="password" size="20" value="" />
+                        <input type="password" id="password" name="password" size="20" value="test" />
                     </td>
                 </tr>
                 <tr align="center">
